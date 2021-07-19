@@ -1,0 +1,8 @@
+:root {
+    --md-primary-fg-color:        #221f47;
+}
+
+.center {
+    display: block;
+    margin: 0 auto;
+}

@@ -1,0 +1,15 @@
+site_name: MetalTrail Documentation
+extra_css:
+  - stylesheets/extra.css
+theme:
+  name: material
+  favicon: images/favicon.svg
+  logo: images/favicon.svg
+  font: Roboto
+  palette:
+    primary: md-primary-fg-color
+markdown_extensions:
+  - attr_list
+nav:
+    - API User Guide: index.md
+copyright: Copyright &copy; MetalTrail. All rights reserved.
