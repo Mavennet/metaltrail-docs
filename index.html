@@ -1,0 +1,583 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.1.11">
+    
+    
+      
+        <title>MetalTrail Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.3754935a.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="md-primary-fg-color" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-user-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="MetalTrail Documentation" class="md-header__button md-logo" aria-label="MetalTrail Documentation" data-md-component="logo">
+      
+  <img src="images/favicon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MetalTrail Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API User Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="MetalTrail Documentation" class="md-nav__button md-logo" aria-label="MetalTrail Documentation" data-md-component="logo">
+      
+  <img src="images/favicon.svg" alt="logo">
+
+    </a>
+    MetalTrail Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          API User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        API User Guide
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#swagger-api-documentation" class="md-nav__link">
+    Swagger API Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#productsapi" class="md-nav__link">
+    ProductsAPI
+  </a>
+  
+    <nav class="md-nav" aria-label="ProductsAPI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creation" class="md-nav__link">
+    Creation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformation" class="md-nav__link">
+    Transformation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ownership-transfer" class="md-nav__link">
+    Ownership transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custody-transfer" class="md-nav__link">
+    Custody transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transport" class="md-nav__link">
+    Transport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-identifiers" class="md-nav__link">
+    Import Identifiers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspection" class="md-nav__link">
+    Inspection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#certify" class="md-nav__link">
+    Certify
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#share" class="md-nav__link">
+    Share
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-status-codes-errors" class="md-nav__link">
+    HTTP Status Codes &amp; Errors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    Support
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#swagger-api-documentation" class="md-nav__link">
+    Swagger API Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#productsapi" class="md-nav__link">
+    ProductsAPI
+  </a>
+  
+    <nav class="md-nav" aria-label="ProductsAPI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creation" class="md-nav__link">
+    Creation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformation" class="md-nav__link">
+    Transformation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ownership-transfer" class="md-nav__link">
+    Ownership transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custody-transfer" class="md-nav__link">
+    Custody transfer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transport" class="md-nav__link">
+    Transport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-identifiers" class="md-nav__link">
+    Import Identifiers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspection" class="md-nav__link">
+    Inspection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#certify" class="md-nav__link">
+    Certify
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#share" class="md-nav__link">
+    Share
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-status-codes-errors" class="md-nav__link">
+    HTTP Status Codes &amp; Errors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    Support
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="api-user-guide">API User Guide</h1>
+<p>This document provides the guide to getting started on the MetalTrail platform and building integrations with the REST APIs exposed. The intended audience is a software developer well acquainted with REST APIs and JSON. With that knowledge, the Swagger API Documentation will be the best place to start testing and exploring the platform APIs.</p>
+<h2 id="swagger-api-documentation">Swagger API Documentation</h2>
+<p>The REST APIs in MetalTrail follow the OpenAPI standard specifications. These API endpoints are documented using the famous <a href="https://swagger.io/">Swagger tool</a>, it allows developers to interact and execute API calls directly from the Swagger UI.</p>
+<p><strong>Swagger URL -</strong> <a href="https://api-prod.metaltrail.com/api">https://api-prod.metaltrail.com/api</a></p>
+<h2 id="authentication">Authentication</h2>
+<p>As MetalTrail is an invite-only platform, authentication token is required to integrate with MetalTrail REST APIs. API calls without the authentication token will fail. </p>
+<p>Please visit <a href="https://mavennet.com/solutions/metaltrail/">https://mavennet.com/solutions/metaltrail/</a> to begin the onboarding process.</p>
+<h2 id="productsapi">ProductsAPI</h2>
+<p>A product can be any steel-related product such as raw materials, heat, or semi-finished steel. The product information is stored in the form of a verifiable credential issued by the organization who created it.</p>
+<p>Below are the set of functions that can be carried out on the product. Please be sure to have the authentication material at hand before beginning to work with the API endpoints.</p>
+<h4 id="creation">Creation</h4>
+<p>The products can be created and fetched in the MetalTrail platform using below set of API endpoints. When a product is created, a corresponding creation of the product event is also stored in MetalTrail. Each product and the event is uniquely identified with a UUID.</p>
+<pre><code>POST /v1/products
+GET /v1/products
+GET /v1/products/{id}
+</code></pre>
+<h4 id="transformation">Transformation</h4>
+<p>Within a lifecycle of the product(s), the (producer) owner of the product(s) can smelt, cast, finish, refine and fabricate while the downstream fabricator can finish, refine, or fabricate. Every new transformed child product issues a verifiable credential. Eg. Scrap steel and iron can be smelted into heat. Each transformation is stored as an event associated to the product.</p>
+<pre><code>POST /v1/products/transform
+</code></pre>
+<h4 id="ownership-transfer">Ownership transfer</h4>
+<p>The ownership transfer of the product is carried out in three steps -
+1. The current owner organization creates an ownership transfer request for the product with the prospective new owner of the product.
+2. The prospective new owner receives the request, can fetch/review the information in the request and either accept it or request for change in the transfer request.
+3. When the prospective new owner accepts the request, the transfer is executed automatically and a transfer of ownership event is created in MetalTrail.</p>
+<pre><code>POST /v1/products/transferownership/requests
+PUT /v1/products/transferownership/requests
+POST /v1/products/transferownership/confirm
+POST /v1/products/transferownership
+POST /v1/products/transfer/requests  
+DELETE /v1/products/transfer/requests  
+</code></pre>
+<h4 id="custody-transfer">Custody transfer</h4>
+<p>The custody transfer of the product follows similar three steps process as ownership transfer - 
+1. The current owner or the custodian organization creates a custody transfer request for the product with the prospective new custodian of the product.
+2. The prospective new custodian receives the request, can fetch/review the information in the request and either accept it or request for change in the transfer request.
+3. If the request is accepted by the prospective new custodian then the product will automatically be transferred to the new custodian. This will create a transfer of custody event which will be associated with the product. If the changes are requested then the current owner can make corresponding changes and start with step 2.</p>
+<pre><code>POST /v1/products/transfercustody/requests
+PUT /v1/products/transfercustody/requests
+POST /v1/products/transfercustody/confirm  
+POST /v1/products/transfercustody
+POST /v1/products/transfer/requests
+DELETE /v1/products/transfer/requests
+</code></pre>
+<h4 id="transport">Transport</h4>
+<p>The custodian organization transports the product from one location to another. This movement is recorded in MetalTrail in the form of <code>start</code> and <code>end</code> transport events. Bill of Lading details are captured during this process. Transport events support correction of the details using the VC revocation standards. </p>
+<pre><code>POST /v1/products/transport
+PUT /v1/products/transport
+</code></pre>
+<h4 id="import-identifiers">Import Identifiers</h4>
+<p>The owner of the product should first share the product with their customs broker. The broker can then access the product and add relevant identifiers from the import declaration documents (i.e. entry summary ID, free trade zone admissions no. or QP In-Bond). This is stored as an event on MetalTrail. MetalTrail supports correction of the import identifier details using the VC revocation standards.</p>
+<pre><code>POST /v1/products/QPInBond  
+PUT /v1/products/QPInBond  
+</code></pre>
+<h4 id="inspection">Inspection</h4>
+<p>The owner or custodian organization can inspect the product for its physical and chemical specifications at any point of time. The inspection result is recorded as event in MetalTrail.</p>
+<pre><code>POST /v1/products/inspect  
+</code></pre>
+<h4 id="certify">Certify</h4>
+<p>MetalTrail enables users to submit pre-arrival and "intent to import" information to customs and regulatory agencies. The owner can claim free trade agreement benefits by "certifying" eligibility and submitting required data fields to the relevant parties. </p>
+<pre><code>POST /v1/products/certify  
+</code></pre>
+<h4 id="share">Share</h4>
+<p>The owner of the product can share or unshare the product with another organization(s). If the product is shared, an organization can access all the product details such as product's physical and chemical specifications, associated events with their location of occurrence, origin, product's composition/traceablility hierarchy and uploaded documents if any.</p>
+<pre><code>POST /v1/products/share  
+GET /v1/products/share  
+DELETE /v1/products/share  
+</code></pre>
+<h2 id="http-status-codes-errors">HTTP Status Codes &amp; Errors</h2>
+<p>MetalTrail uses conventional HTTP response codes to indicate the success or failure of an API request. An exhaustive list for the same can be found <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">here</a>.</p>
+<h2 id="support">Support</h2>
+<p>Please contact support at support@mavennet.com. </p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; MetalTrail. All rights reserved.
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      
+    
+  </body>
+</html>
