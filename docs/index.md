@@ -6,11 +6,11 @@ This document provides the guide to getting started on the MetalTrail platform a
 
 The REST APIs in MetalTrail follow the OpenAPI standard specifications. These API endpoints are documented using the famous [Swagger tool](https://swagger.io/), it allows developers to interact and execute API calls directly from the Swagger UI.
 
-**Swagger URL -** [https://org-sandbox.neoflow.ca/api](https://org-sandbox.neoflow.ca/api)  
+**Swagger URL -** [https://api-prod.metaltrail.com/api](https://api-prod.metaltrail.com/api)
 
 ## Authentication
 
-As MetalTrail is an invite-only platform, authentication token is required to integrate with MetalTrail REST APIs. API calls without the authentication token will fail.  
+As MetalTrail is an invite-only platform, authentication token is required to integrate with MetalTrail REST APIs. API calls without the authentication token will fail. 
 
 Please visit [https://mavennet.com/solutions/metaltrail/](https://mavennet.com/solutions/metaltrail/) to begin the onboarding process.
 
@@ -22,7 +22,7 @@ Below are the set of functions that can be carried out on the product. Please be
 
 #### Creation
 
-The products can be created and fetched in the MetalTrail platform using below set of API endpoints. When a product is created, a corresponding creation of the product event is also stored in MetalTrail. Each product and the event is uniquely identified with a UUID. 
+The products can be created and fetched in the MetalTrail platform using below set of API endpoints. When a product is created, a corresponding creation of the product event is also stored in MetalTrail. Each product and the event is uniquely identified with a UUID.
 
 ```
 POST /v1/products
@@ -39,7 +39,7 @@ POST /v1/products/transform
 
 #### Ownership transfer
 
-The ownership transfer of the product is carried out in three steps - 
+The ownership transfer of the product is carried out in three steps -
 1. The current owner organization creates an ownership transfer request for the product with the prospective new owner of the product.
 2. The prospective new owner receives the request, can fetch/review the information in the request and either accept it or request for change in the transfer request.
 3. When the prospective new owner accepts the request, the transfer is executed automatically and a transfer of ownership event is created in MetalTrail.
