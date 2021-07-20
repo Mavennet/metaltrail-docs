@@ -6,18 +6,17 @@ This document provides the guide to getting started on the MetalTrail platform a
 
 The REST APIs in MetalTrail follow the OpenAPI standard specifications. These API endpoints are documented using the famous [Swagger tool](https://swagger.io/), it allows developers to interact and execute API calls directly from the Swagger UI.
 
-
 **Swagger URL -** [https://org-sandbox.neoflow.ca/api](https://org-sandbox.neoflow.ca/api)  
 
 ## Authentication
 
 As MetalTrail is an invite-only platform, authentication token is required to integrate with MetalTrail REST APIs. API calls without the authentication token will fail.  
 
-Please visit [https://neoflow.energy](https://neoflow.energy) to begin the onboarding process.
+Please visit [https://mavennet.com/solutions/metaltrail/](https://mavennet.com/solutions/metaltrail/) to begin the onboarding process.
 
 ## ProductsAPI
 
-A product can be any petroleum-based product, such as crude oil streams, bitumen or natural gas. The product information is stored in the form of a verifiable credential issued by the organization who created it.
+A product can be any steel-related product such as raw materials, heat, or semi-finished steel. The product information is stored in the form of a verifiable credential issued by the organization who created it.
 
 Below are the set of functions that can be carried out on the product. Please be sure to have the authentication material at hand before beginning to work with the API endpoints.
 
@@ -26,13 +25,13 @@ Below are the set of functions that can be carried out on the product. Please be
 The products can be created and fetched in the MetalTrail platform using below set of API endpoints. When a product is created, a corresponding creation of the product event is also stored in MetalTrail. Each product and the event is uniquely identified with a UUID. 
 
 ```
-POST /v1/products  
-GET /v1/products  
-GET /v1/products/{id}  
+POST /v1/products
+GET /v1/products
+GET /v1/products/{id}
 ```
 #### Transformation
 
-Within a lifecycle of the product(s), the owner of the product(s) can upgrade, refine, blend, pool and split into multiple child products. Every new transformed child product issues a verifiable credential. Eg. Bitumen and Naphtha can be upgraded to Crude Oil. Gasoline can be split into multiple gasoline batches. Each transformation is stored as an event associated to the product.
+Within a lifecycle of the product(s), the (producer) owner of the product(s) can smelt, cast, finish, refine and fabricate while the downstream fabricator can finish, refine, or fabricate. Every new transformed child product issues a verifiable credential. Eg. Scrap steel and iron can be smelted into heat. Each transformation is stored as an event associated to the product.
 
 ```
 POST /v1/products/transform
