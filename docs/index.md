@@ -42,13 +42,13 @@ POST /v1/products/transform
 The ownership transfer of the product is carried out in three steps - 
 1. The current owner organization creates an ownership transfer request for the product with the prospective new owner of the product.
 2. The prospective new owner receives the request, can fetch/review the information in the request and either accept it or request for change in the transfer request.
-3. If the request is accepted by the prospective new owner then the current owner can actually make the transfer of product to the new owner. This will create a transfer of ownership event which will be associated to the product. If the changes are requested then the current owner can make corresponding changes and start with step 2.
+3. When the prospective new owner accepts the request, the transfer is executed automatically and a transfer of ownership event is created in MetalTrail.
 
 ```
-POST /v1/products/transferownership/requests  
-PUT /v1/products/transferownership/requests  
-POST /v1/products/transferownership/confirm  
-POST /v1/products/transferownership  
+POST /v1/products/transferownership/requests
+PUT /v1/products/transferownership/requests
+POST /v1/products/transferownership/confirm
+POST /v1/products/transferownership
 POST /v1/products/transfer/requests  
 DELETE /v1/products/transfer/requests  
 ```
@@ -58,32 +58,24 @@ DELETE /v1/products/transfer/requests
 The custody transfer of the product follows similar three steps process as ownership transfer - 
 1. The current owner or the custodian organization creates a custody transfer request for the product with the prospective new custodian of the product.
 2. The prospective new custodian receives the request, can fetch/review the information in the request and either accept it or request for change in the transfer request.
-3. If the request is accepted by the prospective new custodian then the current owner or the custodian can actually make the custody transfer of product to the new custodian. This will create a transfer of custody event which will be associated to the product. If the changes are requested then the current owner can make corresponding changes and start with step 2.
+3. If the request is accepted by the prospective new custodian then the product will automatically be transferred to the new custodian. This will create a transfer of custody event which will be associated with the product. If the changes are requested then the current owner can make corresponding changes and start with step 2.
 
 ```
-POST /v1/products/transfercustody/requests  
-PUT /v1/products/transfercustody/requests  
+POST /v1/products/transfercustody/requests
+PUT /v1/products/transfercustody/requests
 POST /v1/products/transfercustody/confirm  
-POST /v1/products/transfercustody  
-POST /v1/products/transfer/requests  
-DELETE /v1/products/transfer/requests  
+POST /v1/products/transfercustody
+POST /v1/products/transfer/requests
+DELETE /v1/products/transfer/requests
 ```
 
 #### Transport
 
-The custodian organization transports the product from one location to another. This movement is recorded in MetalTrail in the form of `start` and `end` transport events. Bill of Lading details are captured at during this process. Transport events support correction of the details using the VC revocation standards. 
+The custodian organization transports the product from one location to another. This movement is recorded in MetalTrail in the form of `start` and `end` transport events. Bill of Lading details are captured during this process. Transport events support correction of the details using the VC revocation standards. 
 
 ```
-POST /v1/products/transport  
-PUT /v1/products/transport  
-```
-
-#### Storage
-
-The owner or custodian organization stores the product at a given tank location. This is recorded in MetalTrail as `start` event - indicating the product is in storage at the tank location and `end` event - indicating the product is out of storage.
-
-```
-POST /v1/products/storage  
+POST /v1/products/transport
+PUT /v1/products/transport
 ```
 
 #### Import Identifiers
